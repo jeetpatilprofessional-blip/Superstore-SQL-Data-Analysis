@@ -6,11 +6,7 @@ A MySQL project using a relational database to analyze Superstore customers, pro
 Design a relational database for a Superstore and answer business questions using SQL. The original project report covers customer activity, category performance, top-selling products, discount patterns, loss-making transactions, and shipping modes.
 
 ## Dataset
-- File: Dataset/Sample-Superstore.csv
-- Records: 9,994
-- Columns: 21
-- Fields include order, customer, product, geography, sales, quantity, discount, and profit.
-- The supplied CSV is Windows-1252-compatible. If MySQL Workbench has trouble importing special characters, save a UTF-8 copy first.
+The analysis is designed for the Sample Superstore dataset (commonly 9,994 rows and 21 columns). **The dataset file is not currently present in this repository**, so obtain the source CSV separately before following the import steps. The flat data includes order, customer, product, geography, sales, quantity, discount, and profit.
 
 ## Database design
 Database: superstore_db
@@ -28,7 +24,7 @@ The flat source data is separated into four tables:
 
 ## How to run
 1. Open MySQL Workbench.
-2. Run SQL/Superstore_Analysis.sql to create the four tables.
+2. Run `Superstore_Analysis.sql` (currently stored in the repository root) to create the four tables.
 3. Import the CSV data into the corresponding tables using the Table Data Import Wizard. Map columns carefully: the CSV is a flat file, while the SQL schema is split into four tables.
 4. Execute the analysis queries in the SQL script.
 
@@ -56,10 +52,10 @@ The flat source data is separated into four tables:
 - Shipping-mode analysis is discussed as an area for understanding order handling and profitability.
 
 ## Repository structure
-- Dataset/Sample-Superstore.csv
-- SQL/Superstore_Analysis.sql
-- Report/Superstore_Project_Report.pdf
-- README.md
+- `Superstore_Analysis.sql` — SQL script in repository root.
+- `README.md` — project guide.
+
+Dataset and report files referenced in earlier documentation are not currently verified as present.
 
 ## Note
-The SQL file retains the original analysis questions and fixes invalid or incorrect statements. The PDF is the original project report and retains its reported results.
+The SQL script contains the analysis questions and corrected examples. The dataset and report should be added to the repository to make the project reproducible and fully reviewable.
