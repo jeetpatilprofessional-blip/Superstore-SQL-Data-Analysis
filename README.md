@@ -1,21 +1,21 @@
 # Superstore SQL Data Analysis
 
-A MySQL project using a relational database to analyze Superstore customers, products, orders, sales, discounts, and profitability.
+A MySQL project that analyzes Superstore customers, products, orders, sales, discounts, and profitability using a relational database.
 
 ## Project objective
-Design a relational database for a Superstore and answer business questions using SQL. The original project report covers customer activity, category performance, top-selling products, discount patterns, loss-making transactions, and shipping modes.
+Design a relational database for a Superstore and answer business questions using SQL. The analysis covers customer activity, category performance, top-selling products, discount patterns, loss-making transactions, and shipping modes.
 
 ## Dataset
-The analysis is designed for the Sample Superstore dataset (commonly 9,994 rows and 21 columns). **The dataset file is not currently present in this repository**, so obtain the source CSV separately before following the import steps. The flat data includes order, customer, product, geography, sales, quantity, discount, and profit.
+This project is designed for the Sample Superstore dataset (commonly distributed with 9,994 rows and 21 columns). **The dataset is not included in this repository.** Obtain the dataset from a source whose terms permit your use, then import it before running the analysis. The source data contains order, customer, product, geography, sales, quantity, discount, and profit fields.
 
 ## Database design
-Database: superstore_db
+Database: `superstore_db`
 
-The flat source data is separated into four tables:
-- customers: customer details and geography
-- products: product category, sub-category, and name
-- orders: order date, ship date, ship mode, and customer
-- order_details: product-level sales, quantity, discount, and profit
+The flat source data is organized into four tables:
+- `customers` — customer details and geography
+- `products` — product category, sub-category, and name
+- `orders` — order date, ship date, ship mode, and customer
+- `order_details` — product-level sales, quantity, discount, and profit
 
 ## Tools
 - MySQL / MySQL Workbench
@@ -23,39 +23,39 @@ The flat source data is separated into four tables:
 - Microsoft Excel for data review and cleaning
 
 ## How to run
-1. Open MySQL Workbench.
-2. Run `Superstore_Analysis.sql` (currently stored in the repository root) to create the four tables.
-3. Import the CSV data into the corresponding tables using the Table Data Import Wizard. Map columns carefully: the CSV is a flat file, while the SQL schema is split into four tables.
-4. Execute the analysis queries in the SQL script.
+1. Obtain the Sample Superstore CSV dataset and review its usage terms.
+2. Open MySQL Workbench and create/select the `superstore_db` database.
+3. Open and run [SQL/Superstore_Analysis.sql](SQL/Superstore_Analysis.sql).
+4. Import the source CSV data into the corresponding tables. The source is a flat file, while the SQL schema is split into four tables; map fields carefully.
+5. Execute the analysis queries in the SQL script.
 
 ## Analysis questions
-1. List customers from Kentucky.
-2. Find the 10 highest-sales line items.
-3. Display unique product names.
-4. Count order records.
-5. Filter orders shipped by Second Class.
-6. Calculate sales and profit by category.
-7. Count orders per customer.
-8. Calculate average discount by sub-category.
-9. Find customers whose total purchases exceed 10,000.
-10. List loss-making order line items.
-11. Find the five most profitable products.
-12. Identify the category with the highest sales.
-13. List customers and their cities.
-14. Count records in each table.
-15. List Furniture products.
+The SQL script includes queries covering:
+1. Customers from Kentucky.
+2. Ten highest-sales line items.
+3. Unique product names.
+4. Order-record counts.
+5. Orders shipped by Second Class.
+6. Sales and profit by category.
+7. Orders per customer.
+8. Average discount by sub-category.
+9. Customers whose total purchases exceed 10,000.
+10. Loss-making order line items.
+11. Five most profitable products.
+12. Category with the highest sales.
+13. Customers and their cities.
+14. Record counts in each table.
+15. Furniture products.
 
-## Key observations in the original report
-- The category summary shows Technology with the highest sales among the three categories.
-- The report highlights negative-profit transactions as a reason to review discounting and pricing.
-- Customer purchase and order-frequency analysis can help identify high-value customers.
-- Shipping-mode analysis is discussed as an area for understanding order handling and profitability.
+## Key observations
+The original project report highlights Technology as the highest-sales category and identifies negative-profit transactions as an area for reviewing discounting and pricing. Re-run the queries against your imported dataset before presenting these as verified findings.
 
-## Repository structure
-- `Superstore_Analysis.sql` — SQL script in repository root.
+## Repository contents
+- `SQL/Superstore_Analysis.sql` — database setup and analysis queries.
 - `README.md` — project guide.
 
-Dataset and report files referenced in earlier documentation are not currently verified as present.
+## Limitation
+The dataset is not currently included, so the project is not immediately reproducible from a fresh clone. Add a permitted dataset copy or provide a reliable source link and import instructions to improve reproducibility.
 
-## Note
-The SQL script contains the analysis questions and corrected examples. The dataset and report should be added to the repository to make the project reproducible and fully reviewable.
+## Author
+Jeet Patil
